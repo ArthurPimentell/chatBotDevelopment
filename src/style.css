@@ -18,25 +18,27 @@
     color: #f1f1f1;
     font-style: initial;
     font-family: monospace;
-    font-size: 22px;
+    font-size: 30px;
+    font-weight: bold;
+    transform: scale(1.09);
+    transition: 0.3s;
 }
 
 body {
     
     justify-content: center;
     align-items: center;
-    height: 100%;
-    background-image: linear-gradient(rgb(22, 22, 22), rgb(22, 22, 22));
+    background-color: #000000;
 }
 
 
 .chat-container {
     width: 80%;
-    height: 700px;
-    background: rgba(255, 255, 255, 0);
+    height: 490px;
+    background: rgba(61, 61, 61, 0.226);
     border-radius: 10px;
     border: 0.5px solid #c9c9c934;
-    box-shadow: 0 50px 100px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 100px rgba(255, 255, 255, 0.1);
     display: flex;
     margin: 0 auto;
     flex-direction: column;
@@ -87,14 +89,12 @@ body {
 .chat-box {
     flex: 1;
     padding: 15px;
-    font-family: sans-serif;
-    font-style: none;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-style: oblique;
     color: #ddd;
+    font-family: monospace;
 }
 .chat-input {
     display: flex;
@@ -132,4 +132,35 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 10px rgb(0, 0, 0);
     transform: scale(1.05);
+}
+
+@media screen and (max-width: 1020px){
+    .texto-topo p{
+        font-size: 15px;
+        transform: scale(1.09);
+        transition: 0.5s;
+
+    }
+
+    .chat-header button {
+
+        font-size: 10px;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        transition: .4s;
+        width:  100px;
+
+    }
+    
+    .chat-header button:hover {
+        background: rgb(255, 255, 255);
+        color: #000000;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        transform: scale(1.05);
+    }
+    
 }
