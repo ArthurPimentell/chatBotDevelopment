@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     justify-content: center;
-    margin-top: 110px;
+    margin-top: 90px;
     height: 70px;
 }
 
@@ -184,5 +184,17 @@ body {
         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
         transform: scale(1.05);
     }
+
+    .chat-box {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        background-position: -310px -30px;
+        color: #ddd;
+        background-image: url(img/Cópia\ de\ LG\ \(2\).jpg);
+        background-repeat: no-repeat;
+        font-family: monospace;
     
 }
