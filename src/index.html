@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -24,39 +24,17 @@
     <div class="chat-container">
         
         <div class="chat-header">
-            Chatbot 2
+            <p>Chatbot</p>
             <button onclick="viewHistory()">Ver Histórico de Perguntas</button>
         </div>
         <div class="chat-box" id="chat-box">
         </div>
         <div class="chat-input">
             <input type="text" id="user-input" placeholder="Digite sua mensagem...">
-            <button onclick="sendMessage()">Enviar</button>
+            <button id="enviarDados">Enviar</button>
         </div>
     </div>
     
-    <script>
-        let history = [];
-        
-        function sendMessage() {
-            let input = document.getElementById("user-input");
-            let message = input.value.trim();
-            if (message === "") return;
-            
-            let chatBox = document.getElementById("chat-box");
-            let userMessage = document.createElement("p");
-            userMessage.textContent = "Você: " + message;
-            chatBox.appendChild(userMessage);
-            
-            history.push(message);
-            
-            input.value = "";
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-        
-        function viewHistory() {
-            alert("Histórico de perguntas:\n" + history.join("\n"));
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
